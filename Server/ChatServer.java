@@ -38,12 +38,12 @@ public class ChatServer {
         clientB = server.accept();
 
         pool.submit(() -> {
-        try {
-        manageClient(clientA);
+            try {
+                manageClient(clientA);
 
-        } catch (Exception e) {
-        System.out.println(e);
-        }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
 
         });
 
@@ -63,25 +63,24 @@ public class ChatServer {
 
         Thread.sleep(Long.MAX_VALUE);
 
-
         // while (true) {
 
-        //     Socket client = server.accept();
-        //     if (clientA == null) {
-        //         clientA = client;
-        //     } else if (clientB == null) {
-        //         clientB = client;
-        //     }
+        // Socket client = server.accept();
+        // if (clientA == null) {
+        // clientA = client;
+        // } else if (clientB == null) {
+        // clientB = client;
+        // }
 
-        //     pool.submit(() -> {
-        //         try {
-        //             manageClient(client);
+        // pool.submit(() -> {
+        // try {
+        // manageClient(client);
 
-        //         } catch (Exception e) {
-        //             System.out.println(e);
-        //         }
+        // } catch (Exception e) {
+        // System.out.println(e);
+        // }
 
-        //     });
+        // });
         // }
 
     }
