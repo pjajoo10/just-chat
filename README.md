@@ -4,7 +4,7 @@
 This is a one-on-one simulated chat system between 2 clients only.  
 It is built as the first step toward developing a full chat platform.  
 To keep things simple, we broke the full system down to its most essential component:  
-the exchange of information between two clients.  
+The exchange of information between two clients.  
 
 By starting here, we establish the foundation of a chat system while moving beyond planning and into actual implementation.
 
@@ -19,8 +19,7 @@ By starting here, we establish the foundation of a chat system while moving beyo
 
 ### Scope
 - Supports 2 clients only  
-- No chat persistence  
-- No store-and-forward mechanism (both users must be online to exchange messages)
+- No user input (pre-defined/simulated messages only)  
 
 ### Components
 - Server  
@@ -40,13 +39,6 @@ By starting here, we establish the foundation of a chat system while moving beyo
 - Connection Protocol: TCP sockets (reliable delivery)  
 - Concurrency Model: Server handles two client sessions simultaneously  
 - Session Lifecycle: Ends when the simulation completes  
-
----
-
-## Limitations (v1)
-- No user input (pre-defined/simulated messages only)  
-- No chat history (persistence)  
-- No offline delivery (store-and-forward)  
 
 ---
 
