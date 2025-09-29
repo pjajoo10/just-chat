@@ -34,5 +34,5 @@ This is the second version of the one-on-one chat system. In v1, message exchang
 - **Major Change from v1:** Removed automated simulation, added real-time input from users.  
 - **Exit Handling:** Typing `exit` cleanly terminates a user’s session.  
 
-## Next Steps (Planned for v3)  
+## Next Steps (for v3)  
 - Support for multiple clients simultaneously
