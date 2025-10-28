@@ -1,4 +1,4 @@
-package com.just_chat.message_service.connection;
+package com.just_chat.message_service.controller;
 
 public class ChatWebSocketHandler extends TextWebSocketHandler{
     
@@ -9,14 +9,14 @@ public class ChatWebSocketHandler extends TextWebSocketHandler{
 
     public afterConnectionEstablished(WebSocketSession session){
 
+        
+
     }
 
     public handleTextMessage(WebSocketSession session, TextMessage message){
-
-        //messageService.validateMessage(session, message);
-
-
-
+        String jsonPayload=message.getPayload();
+        MessageRequest dtoPayload = objectMapper.readValue(jsonPayload, MessageRequest.class);
+        messageService.processMessage(session, dtoPayload);
     }
 
     public afterConnectionClosed(WesSocketSession session, CloseStatus status){

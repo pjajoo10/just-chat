@@ -1,7 +1,10 @@
 package com.just_chat.message_service.model;
 
-@entity
+@Entity
 public class ChatMember {
-    private long chat_id;
-    private long user_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private long chatId;
+    private long userId;
 }

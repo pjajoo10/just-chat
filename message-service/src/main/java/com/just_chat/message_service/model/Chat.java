@@ -1,7 +1,7 @@
 package com.just_chat.message_service.model;
 
 @Entity
-public class User {
+public class Chat {
     @Id
-    private long userId;
+    private long chatId;
 }
